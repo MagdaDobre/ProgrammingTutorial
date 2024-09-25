@@ -1,6 +1,9 @@
 package oop_mostenire;
 
-public class Student extends Persoana{
+import javax.sound.midi.Soundbank;
+import java.sql.SQLOutput;
+
+public class Student extends Persoana implements StudentInterface{
     private String facultate;
     private String domeniu;
     private int anStudiu;
@@ -70,5 +73,25 @@ public class Student extends Persoana{
 
     public void setRestante(boolean restante) {
         this.restante = restante;
+    }
+
+    @Override
+    public void mergeLaCursuri() {
+        System.out.println("Studentul merge la cursuri.");
+    }
+
+    @Override
+    public void trebuieSaStudieze() {
+        System.out.println("Studentul trebuie sa studieze.");
+    }
+
+    @Override
+    public void saNuAibaRestanta() {
+        System.out.println("Studentul sa nu aiba restante.");
+    }
+
+    @Override
+    public void saStieSaCopieze() {
+        System.out.println("Studentul stie sa copieze.");
     }
 }

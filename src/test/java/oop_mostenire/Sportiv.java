@@ -1,9 +1,9 @@
 package oop_mostenire;
 
-public class Sportiv extends Persoana{
+public class Sportiv extends Persoana implements SportivInterface{
     private String sport;
     private boolean sportEchipa;
-    private int experienta;
+    private int experientaProfesionala;
     private boolean performanta;
     private int medalii;
 
@@ -12,7 +12,7 @@ public class Sportiv extends Persoana{
         super(nume, prenume, varsta, sex, adresa);
         this.sport = sport;
         this.sportEchipa = sportEchipa;
-        this.experienta = experienta;
+        this.experientaProfesionala = experienta;
         this.performanta = performanta;
         this.medalii = medalii;
     }
@@ -21,7 +21,7 @@ public class Sportiv extends Persoana{
         infoPersoana();
         System.out.println("Sportul pe care il practica este: " + sport);
         System.out.println("Joaca in echipa? " + sportEchipa);
-        System.out.println("Experienta sportivului este de " + experienta + " ani.");
+        System.out.println("Experienta sportivului este de " + experientaProfesionala + " ani.");
         System.out.println("Practica sport de performanta? " + performanta);
         System.out.println("Cate medalii a castigat sportivul? " + medalii);
 
@@ -48,11 +48,11 @@ public class Sportiv extends Persoana{
     }
 
     public int getExperienta() {
-        return experienta;
+        return experientaProfesionala;
     }
 
     public void setExperienta(int experienta) {
-        this.experienta = experienta;
+        this.experientaProfesionala = experienta;
     }
 
     public boolean isPerformanta() {
@@ -69,5 +69,20 @@ public class Sportiv extends Persoana{
 
     public void setMedalii(int medalii) {
         this.medalii = medalii;
+    }
+
+    @Override
+    public void faceAntrenament() {
+        System.out.println("Sportivul participa la antrenament.");
+    }
+
+    @Override
+    public void seOdihneste() {
+        System.out.println("Sportivul se odihneste suficient.");
+    }
+
+    @Override
+    public void joacaInEchipa() {
+        System.out.println("Sportivul nu joaca in echipa.");
     }
 }

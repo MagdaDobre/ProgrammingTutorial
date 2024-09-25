@@ -1,7 +1,4 @@
-package oop_mostenire;
-
-import javax.sound.midi.Soundbank;
-import java.sql.SQLOutput;
+package oop_v1;
 
 public class Student extends Persoana implements StudentInterface{
     private String facultate;
